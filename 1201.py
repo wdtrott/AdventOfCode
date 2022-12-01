@@ -12,5 +12,5 @@ for line in data:
 
 sort_cals = dict(sorted({elf: sum(calories) for elf, calories in elves.items()}.items(), key=lambda item: item[1]))
 
-print(f"Max calories: {total_cals[list(sort_cals.keys())[-1]]}")
-print(f"Total for top 3 calories: {sum([total_cals[key] for key in list(sort_cals.keys())[-3:]])}")
+print(f"Max calories: {sort_cals[list(sort_cals.keys())[-1]]}")
+print(f"Total for top 3 calories: {sum([sort_cals[key] for key in list(sort_cals.keys())[-3:]])}")
